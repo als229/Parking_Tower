@@ -95,10 +95,12 @@ public class ParkingTowerMainMenu {
 	public void searchCar() {
 		System.out.print("주차 차량 차주 검색 :");
 		String owner = sc.nextLine();
-
+		List <Car> searchedCar = pc.searchCar(owner);
 		if (pc.searchCar(owner) != null) {
 			System.out.println("검색결과 " + pc.searchCar(owner).size() + "개의 차량이 조회되었습니다");
-			System.out.println(pc.searchCar(owner));
+			for(Car c : searchedCar) {
+				System.out.println(c);
+			}
 		} else
 			System.out.println("그런 차량이 없습니다.");
 	}
