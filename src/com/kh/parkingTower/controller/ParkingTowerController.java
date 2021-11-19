@@ -24,10 +24,11 @@ public class ParkingTowerController {
 				count++;
 				break;
 			}
-		}return count;
+		}
+		return count;
 	}
 
-	public ArrayList<Car> searchCar(String owner) {
+	public List<Car> searchCar(String owner) {
 		ArrayList<Car> searched = new ArrayList<Car>();
 		for (int i = 0; i < list.size(); i++) {
 			if (list.get(i).getOwner().equals(owner)) {
@@ -37,12 +38,12 @@ public class ParkingTowerController {
 		}
 		return searched;
 	}
-	
-	public List<Car> printCar(){
-		for(int i =0; i < list.size();i++) {
-			list.get(i).setParkingNum(i+1);
+
+	public List<Car> printCar() {
+		for (int i = 0; i < list.size(); i++) {
+			list.get(i).setParkingNum(i + 1);
 		}
-		
+
 		return this.list;
 	}
 
